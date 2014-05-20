@@ -1,5 +1,5 @@
 <?php
-$numeroAppelé=$numeroDist[$e];
+$numeroAppele=$numeroDist[$e];
 
 //Requête préparée, insertion données dans la table COMMUNICATIONS
 $requete = 'INSERT INTO communications (abonne_id,dateCommunication,
