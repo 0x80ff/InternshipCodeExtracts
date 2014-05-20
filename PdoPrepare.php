@@ -9,12 +9,12 @@ $requete = 'INSERT INTO communications (abonne_id,dateCommunication,
             VALUES (:idabo,:datecom,:numdist,:duration,:typecom,:etend,:mont)';
             
 $query = $this->db->prepare($requete);
-$query->bindValue(':idabo', $ID, PDO::PARAM_INT);
-$query->bindValue(':datecom', $date[$e], PDO::PARAM_INT);
-$query->bindValue(':numdist', $numeroAppelé, PDO::PARAM_INT);
-$query->bindValue(':duration', $durée[$e], PDO::PARAM_INT);
-$query->bindValue(':typecom', $type, PDO::PARAM_INT);
-$query->bindValue(':etend', $etendue, PDO::PARAM_INT);
-$query->bindValue(':mont', $montant[$e], PDO::PARAM_INT);
+$query->bindValue(':idabo',    $ID,           PDO::PARAM_INT);
+$query->bindValue(':datecom',  $date[$e],     PDO::PARAM_INT);
+$query->bindValue(':numdist',  $numeroAppele, PDO::PARAM_INT);
+$query->bindValue(':duration', $duree[$e],    PDO::PARAM_INT);
+$query->bindValue(':typecom',  $type,         PDO::PARAM_INT);
+$query->bindValue(':etend',    $etendue,      PDO::PARAM_INT);
+$query->bindValue(':mont',     $montant[$e],  PDO::PARAM_INT);
 $query->execute();
 ?>
